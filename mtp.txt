@@ -1,0 +1,8 @@
+MAIL_MAILER=smtp
+MAIL_HOST=mail.klinik-booking.dk
+MAIL_PORT=25
+MAIL_USERNAME=noreply@pawersystems.com
+MAIL_PASSWORD=XT7b48q9uQ
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=noreply@pawersystems.com
+MAIL_FROM_NAME="${APP_NAME}"

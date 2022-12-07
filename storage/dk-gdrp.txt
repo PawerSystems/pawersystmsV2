@@ -1,0 +1,1020 @@
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h3 style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-size: 60px; line-height: 66px; font-family: 'Open Sans', sans-serif; font-weight: 400;">
+            <span style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; color: #acb4b1;">GDPR<br style="margin-bottom: 0px;" /></span>
+        </h3>
+    </div>
+</div>
+<div
+    class="separator normal"
+    style="background: 0px 0px #acb4b1; border: 0px; margin: 10px 0px; padding: 0px; vertical-align: baseline; outline: 0px; position: relative; height: 2px; color: #424242; font-family: Roboto, sans-serif; font-size: 17px;"
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Persondatapolitik &amp; vilkår for din behandling hos os
+        </h2>
+        <h4 style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-size: 24px; line-height: 31px; font-weight: 300; font-family: 'Open Sans', sans-serif;">&nbsp;</h4>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Velkommen som patient hos os. I forbindelse med dine behandlinger her hos os er det nødvendigt, at vi noterer og behandler relevante oplysninger om dig.
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Hvilke personoplysninger opbevarer vi?
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 10px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            I forbindelse med din behandling på klinikken noterer vi oplysninger om dine helbredsmæssige forhold til brug for den journalføring, som vi efter sundhedslovgivningen har pligt til at foretage. De nærmere regler findes i
+            autorisationslovens kapitel 6 og journalbekendtgørelsen: Bekendtgørelse nr. 1090 af 28. juli 2016 om 1090 om autoriserede sundhedspersoners patientjournaler, journalføring, opbevaring, videregivelse og overdragelse m.v.<br />
+            Du kan læse bekendtgørelsen via dette link:&nbsp;
+            <a
+                style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;"
+                href="https://www.retsinformation.dk/Forms/R0710.aspx?id=183578"
+            >
+                https://www.retsinformation.dk/Forms/R0710.aspx?id=183578
+            </a>
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Udover de helbredsoplysninger vi selv noterer om dig, kan vi modtage helbredsoplysninger om dig fra andre sundhedspersoner, for eksempel fra din læge, efter reglerne i sundhedslovens kapitel 9. Du kan læse bekendtgørelsen af
+            sundhedsloven via dette link:
+            <a style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;" href="https://www.retsinformation.dk/forms/R0710.aspx">
+                &nbsp;https://www.retsinformation.dk/forms/R0710.aspx
+            </a>
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Oplysningerne anvendes alene til brug for en god og sikker behandling af dig og de administrative funktioner, der er forbundet hermed.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Vi har pligt til at opbevare dine oplysninger sikkert og fortroligt.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Vi kan også registrere andre oplysninger om dig til brug for afregningsformål. Disse oplysninger noteres med hjemmel i databeskyttelsesforordningens art. 6, stk. 1, litra b og f (indtil 25. maj 2018: persondatalovens § 6, stk.
+            1, nr. 2 og nr. 7). Du kan læse nærmere herom via dette link:&nbsp;
+            <a
+                style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;"
+                href="https://www.retsinformation.dk/forms/R0710.aspx?id=194142"
+            >
+                https://www.retsinformation.dk/forms/R0710.aspx?id=194142
+            </a>
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Vi kan også anvende dine kontaktoplysninger til brug for udsendelse af nyhedsbreve eller andre markedsføringsmæssige tiltag. I så fald indhenter vi først dit samtykke. Denne anvendelse sker med hjemmel i
+            databeskyttelsesforordningens art. 6, stk. 1, litra a (indtil 25. maj 2018: persondatalovens § 6, stk. 1, nr. 1).
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Vidergivelse af personoplysninger
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 10px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Efter sundhedsloven har vi tavshedspligt om dine helbredsmæssige og andre følsomme forhold, men hvis det er nødvendigt, kan vi udveksle dine helbredsoplysninger internt blandt vort personale.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Videregivelse af helbredsoplysninger uden for klinikken må som udgangspunkt kun ske med dit samtykke. I særlige tilfælde kan der efter reglerne i sundhedsloven ske videregivelse uden samtykke. Det vil typisk være til andre
+            sundhedspersoner, f.eks. din egen læge. De nærmere regler herom findes i sundhedslovens kapitel 9:&nbsp;
+            <a style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;" href="https://www.retsinformation.dk/forms/R0710.aspx">
+                https://www.retsinformation.dk/forms/R0710.aspx
+            </a>
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            De oplysninger vi har registreret til brug for afregningsformål, udveksles med betalingsformidlere i det omfang, det er nødvendigt for at gennemføre betalingerne. Hvis din behandling helt eller delvist betales af andre end dig
+            selv, f.eks. af din region, kommune eller af et forsikringsselskab, vil vi også videregive oplysninger om behandlingen til den, der skal betale.
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Hvor længe bevares personoplysninger?
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 10px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Din journal opbevares i det tidsrum, der er fastlagt af Styrelsen for Patientsikkerhed. Det gældende tidsrum er 5 år fra det seneste notat i journalen, jf. journalbekendtgørelsens § 15, stk. 2:&nbsp;
+            <a
+                style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;"
+                href="https://www.retsinformation.dk/Forms/R0710.aspx?id=183578"
+            >
+                https://www.retsinformation.dk/Forms/R0710.aspx?id=183578
+            </a>
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">I særlige tilfælde kan journalen opbevares længere.</p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Oplysninger til brug for afregningsformål opbevares så længe, det er nødvendigt af hensyn til afregning og bogføring.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            E-mail korrespondance mellem dig og klinikken slettes når den ikke længere er relevant og senest efter 1 år.
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Dine rettigheder i forbindelse med personoplysninger
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 10px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Du kan få indsigt i hvilke oplysninger, vi har registeret om dig, ved at kontakte os. Efter autorisationslovens § 24 må vi ikke slette oplysninger i din journal, men hvis du mener, at der er fejl i journalen, kan du bede om, at
+            der laves en tilføjelse. Se link hertil:&nbsp;
+            <a
+                style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;"
+                href="https://www.retsinformation.dk/Forms/r0710.aspx?id=192522"
+            >
+                https://www.retsinformation.dk/Forms/r0710.aspx?id=192522
+            </a>
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            For oplysninger, der ikke er omfattet af patientjournalen, har du har ret til at få rettet eller slettet ukorrekte oplysninger. Du har også ret til at bede os om at ophøre med at behandle sådanne oplysninger om dig.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Når du er fyldt 15 år, har du som udgangspunkt ret til at få at vide, hvad der står om dig i en journal hos sundhedsvæsenet.
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 32px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Klage over håndtering af personoplysninger
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 10px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Klager over vores behandling af dine personoplysninger kan indgives til Datatilsynet, Borgergade 28, 5. sal, 1300 København K. Du kan finde nærmere oplysninger om Datatilsynet på&nbsp;
+            <a style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;" href="http://www.datatilsynet.dk/">
+                www.datatilsynet.dk
+            </a>
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Tilsyn med reglerne i sundhedslovgivningen føres af Styrelsen for Patientsikkerhed. Du finder styrelsens kontaktoplysninger på&nbsp;
+            <a style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;" href="http://www.stps.dk/">www.stps.dk</a>
+        </p>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 52px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Utilsigtet hændelse:
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 52px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Hvad er en utilsigtet hændelse?<br />
+            En utilsigtet hændelse er en begivenhed, som medfører skade eller risiko for skade. En utilsigtet hændelse kan kendes ved, at man som patient eller pårørende tænker:<br style="margin-bottom: 0px;" />
+            ”Det, der skete her, burde ikke være sket. Det indebærer en risiko eller har betydning for mig eller min pårørendes behandling. Jeg vil være sikker på, at fagfolkene lærer af denne fejl, både på det aktuelle behandlingssted og
+            generelt i sundhedsvæsenet”.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Hændelsen er utilsigtet, fordi de fagfolk, der er involveret ikke har til hensigt at skade andre. De vil tværtimod gerne have være hændelsen foruden. Utilsigtede hændelser kan ske, hvis der for eksempel er mangler i
+            sikkerhedssystemer, problemer med teknisk udstyr og apparatur, uhensigtsmæssige forhold i tilrettelæggelse af arbejdet, misforståelser eller tab af information.
+        </p>
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">Du kan anmelde en utilsigtede hændelse her.</p>
+    </div>
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <h2
+            style="
+                letter-spacing: 1px;
+                font-weight: 300;
+                background: 0px 0px;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 0px 10px;
+                vertical-align: baseline;
+                outline: 0px;
+                font-size: 34px;
+                line-height: 42px;
+                font-family: 'Open Sans', sans-serif;
+            "
+        >
+            Patienterstatning:
+        </h2>
+    </div>
+</div>
+<div
+    class="vc_empty_space"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        height: 52px;
+    "
+>
+    &nbsp;
+</div>
+<div
+    class="wpb_text_column wpb_content_element"
+    style="
+        background-image: initial;
+        background-position: 0px 0px;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        border: 0px;
+        margin: 0px 0px 35px;
+        padding: 0px;
+        vertical-align: baseline;
+        outline: 0px;
+        color: #424242;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+    "
+>
+    <div class="wpb_wrapper" style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px;">
+        <p style="background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; font-family: Raleway, sans-serif; line-height: 23px;">
+            Patienterstatningen behandler erstatningskrav fra patienter, der er kommet til skade i forbindelse med behandling på et hospital, hos egen læge eller som følge af bivirkninger efter et lægemiddel.<br />
+            Patienterstatningen erstatter skader og dødsfald, der sker som følge af behandling, manglende behandling eller for sen behandling. De erstatter også følgerne af skadelige bivirkninger, der skyldes et lægemiddel.
+            Patienterstatningen kan kun erstatte økonomiske tab og give godtgørelse for svie og smerte og/eller varigt mén.<br />
+            Du kan se mere om patienterstatningen og anmelde skade her:&nbsp;&nbsp;
+            <a style="color: #9ab55f; background: 0px 0px; border: 0px; margin: 0px; padding: 0px; vertical-align: baseline; outline: 0px; text-decoration-line: none; cursor: pointer;" href="http://pebl.dk/">http://pebl.dk/</a>.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+id,customer_id,date_id,status,time,comment,payment_method_id,treatment_part_id,department_id
+7,88,13,Booked,10:00,,7,7,7
+8,77,13,Booked,11:00,,,,
+9,88,13,Booked,12:00,,7,7,7
+10,0,13,Lunch,13:00,,,,
+11,0,14,Booked,9:00,,,,

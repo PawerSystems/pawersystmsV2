@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'payment_method' => 'Betalingsmetoder',
+    'create_method' => 'Opret Metode',
+    'create_payment_method' => 'Opret betalingsmetode',
+    'create_new_method' => 'Opret Ny Metode',
+    'title' => 'Titel',
+    'method_list' => 'Metode Liste',
+    'add_new' => 'Tilføj Ny',
+    'sr' => 'Sr',
+    'status' => 'Status',
+    'action' => 'Handling',
+    'active' => 'Aktiv',
+    'deactive' => 'Deaktiv',
+    'add_new_payment_method' => 'Tilføj Ny Betalingsmetoder',
+    'please_enter_method_title' => 'Skriv venligst metode titel',
+    'data_has_been_deletet_s' => 'Data er blevet slettet med succes',
+    'pmiiusycndi' => 'Betalingsmetoder er i brug, så den kan ikke slettes',
+    'tiauetud' => 'Der skete en uventet fejl',
+    'pcydatta' => 'Kontroller dine data og forsøg igen',
+    'dhbus' => 'Data er blevet opdateret med succes',
+    'payment_method_already_exist' => 'Betalingsmetoder med samme navn findes allerede',
+    'payment_method_has_been_added_successfully' => 'Betalingsmetoderr er tilføjet med succees!',
+    'tiauetapm' => 'Der skete en fejl ved tilføjelse af Betalingsmetoder!',
+    'choose_payment' => 'Vælg betaling',
+];

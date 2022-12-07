@@ -1,0 +1,3 @@
+id,admin_id,name,date,time,duration,slots,price,clips,description,is_guest
+1,3,Cardio Event,2021-01-10,9:00,30,20,100,4,Here something,0
+2,3,Cardio Event 2,2021-01-11,9:00,30,20,100,4,Here something,1

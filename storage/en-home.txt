@@ -1,0 +1,20 @@
+<h2 class="section-heading text-uppercase">Information</h2>
+
+<p>Here you can book an appointment for physical treatment.</p>
+<p>Please observe that booking is only allowed for employees holding a permanent position or employees with a contract.</p>
+<p>A team of professional physiotherapists and masseurs provides treatment.&nbsp;&nbsp;All therapists are state-authorized.</p>
+<p>How to book your appointment:</p>
+<p>· &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press “Booking” (button above)&nbsp;</p>
+<p>
+    ·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fill <em><strong>out</strong></em> data (select unit)
+</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push the scroll down-menu to select time</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click “Book now”.</p>
+<p>&nbsp;</p>
+<p>
+    When pressing “Book now” the reservation is final. If you are prevented from coming to your appointment, please cancel at least 12 hours prior to scheduled time. To cancel use the link you receive by mail, when you completed your
+    booking.<br />
+    <br />
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

@@ -1,0 +1,88 @@
+Dashboard Graphs
+Treatment Create
+Treatment View
+Treatment Edit
+Date Create
+Date View
+Date Edit
+Date Delete
+Date Restore
+Deleted Dates View
+Deleted Dates Bookings View
+Dates Booking Restore
+Date Book
+Date Past Book
+Date Bookings View
+Date Past Bookings View
+Date Booking Delete
+Date Time Close
+Date Time Open
+Event Create
+Event Edit
+Event Delete
+Event List View
+Deleted Events View
+Deleted Events Bookings View
+Event Restore
+Event Booking Delete
+Event Booking Restore
+Event Past Bookings View
+Event Past Book
+Event Book
+Event Booking View
+Role Create
+Role View
+Role Edit
+Department Create
+Department Edit
+Department View
+Department Delete
+Payment Method Create
+Payment Method Edit
+Payment Method View
+Payment Method Delete
+Treatment Area Create
+Treatment Area Edit
+Treatment Area View
+Treatment Area Delete
+Users Create
+Users Edit
+Users View
+Users Delete
+Users Change Password
+Survey List View
+Survey Question Create
+Survey Question Edit
+Survey Question View
+Survey Show
+Card List View
+Card Create
+Card Edit
+Card Clip Puchase
+Customer Create
+Customer Edit
+Customer View
+Customer Delete
+Journal List View
+Journal Open
+Journal Payment/Treatment Update
+Journal Notes View
+Journal Notes Create
+Journal Notes Edit
+Email List View
+Email Create
+Email View
+Email Delete
+Reports Users View
+Reports Booking View
+Reports Date View
+Reports Unique User View
+Reports Srvey View
+Stats View
+Website Pages View
+Website Pages Edit
+Brand Details View
+Brand Details Edit
+Settings View
+Settings Edit
+Billing View

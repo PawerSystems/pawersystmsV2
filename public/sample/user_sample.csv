@@ -1,0 +1,4 @@
+id,name,language,email,number,cprnr/med,last_survey_date,role
+99,Import User,en,import@gmail.com,987789,0,2020-08-07 0:0:0,Customer
+88,Import Customer,dk,importCustomer@gmail.com,888888888,708098098,,Admin
+77,Import Customer 2,dk,importCustomer2@gmail.com,777777777,57576576576,,Admin

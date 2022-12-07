@@ -1,0 +1,16 @@
+<?php
+
+return [
+    "reminder_treatment_sms_txt" => "Hi :name ,\r\n\r\nThank you for using our services. This sms is to remind for your up coming booking.\r\n\r\nTreatmnet: :treatment \r\nTreatment Date: :date \r\nTreatment Time: :time \r\nSms from: :link\r\n\r\nYou cannot reply to this SMS.",
+    "reminder_event_sms_txt" => "Hi, :name ,\r\n\r\nThank you for using our services. This sms is to remind for your up coming booking.\r\n\r\nEvent Name:<b> :event \r\nEvent Date: :date \r\nEvent Time: :time \r\nYour Booking Status: :status\r\nSms from: :link \r\n\r\nYou cannot reply to this SMS.",
+    "clips_used_txt" => "Hi :name,\r\n\r\nThank you for using our services. This message is to inform you that your card has been debited with :used clips. Please see the below details.\r\n\r\nCard Title: :title .\r\nExpiry Date: :expiry .\r\nClips in Card: :clips .\r\nCard use for: :for.\r\n\r\nYou cannot reply to this SMS.",
+    "treatment_bookin_restore_txt" => "Hi :name ,\r\n\r\nThank you for using our services. This message is to inform you that your booking has been restored. Please find the below details of your booking.\r\n\r\nTreatment: :treatment .\r\nTreatment Date: :date .\r\nTreatment Time: :time .\r\nSms from: :link\r\n\r\nYou cannot reply to this SMS.",
+    "treatment_booking_txt" => "Hi :name,\r\n\r\nThank you for using our services. Please find the below details of your booking.\r\n\r\nTreatment: :treatment\r\nTreatment Date: :date\r\nTreatment Time: :time \r\nSms from: :link\r\n\r\nYou cannot reply to this SMS.",
+    "treatment_booking_cancel_txt" =>  "Hi :name,\r\n\r\nThank you for using our services. This message is to inform you that your booking has been canceled. Please see the below details.\r\n\r\nTreatment: :treatment.\r\nTreatment Date: :date.\r\nTreatment Time: :time.\r\nSms from: :link\r\n\r\nYou cannot reply to this SMS.",
+    "card_clip_purchased_txt" => "Hi :name,\r\n\r\nThank you for using our services. This message is to inform you that your card has been credited with :purchase clips. Please see the below details.\r\n\r\nCard Title: :title .\r\nExpiry Date: :date .\r\nClips in Card: :clips .\r\nCard use for: :for .\r\n\r\nYou cannot reply to this SMS.",
+    "clips_restore_txt" => "Hi :name ,\r\n\r\nThank you for using our services. This email is to inform you that your card clips :amount has been restored. Please see the below details.\r\n\r\nCard Title: <b> :title \r\nExpiry Date: :expiry \r\nClips in Card: :clips \r\nCard use for: :for \r\n\r\nYou cannot reply to this SMS.",
+    "event_book_txt" => "Hi :name,\r\n\r\nThank you for using our services. Please find the below details of your booking.\r\n\r\nEvent: :ename .\r\nEvent Date: :date .\r\nEvent Time: :time .\r\nBooking Status: :status \r\n :guest \r\n\r\nYou cannot reply to this SMS.",
+    "event_booking_cancel_txt" => "Hi :name,\r\n\r\nThank you for using our services. This message is to inform you that your booking for event have been canceled. Please find the below details of your booking.\r\n\r\nEvent: :ename .\r\nEvent Date: :date .\r\nEvent Time: :time .\r\n :status r\n\r\nYou cannot reply to this SMS.",
+    "mobile_pay_txt" => "Hi :name ,\r\n\r\nThank you for using our services. Please click below link for payment on mobilePay. \r\n\r\n :link ",
+
+];

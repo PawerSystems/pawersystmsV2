@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'payment_method' => 'Payment Method',
+    'create_method' => 'Create Method',
+    'create_payment_method' => 'Create Payment Method',
+    'create_new_method' => 'Create New Method',
+    'title' => 'Title',
+    'method_list' => 'Methods List',
+    'add_new' => 'Add New',
+    'sr' => 'Sr',
+    'status' => 'Status',
+    'action' => 'Action',
+    'active' => 'Active',
+    'deactive' => 'Deactive',
+    'add_new_payment_method' => 'Add New Payment Method',
+    'please_enter_method_title' => 'Please Enter Method Title',
+    'data_has_been_deletet_s' => 'Data has been deleted successfully',
+    'pmiiusycndi' => 'Payment Method is in used, so you can not delete it',
+    'tiauetud' => 'There is a unexpected error to updating data',
+    'pcydatta' => 'Please check your data and then try again',
+    'dhbus' => 'Data has been updated successfully',
+    'payment_method_already_exist' => 'Payment Method with same name already exist',
+    'payment_method_has_been_added_successfully' => 'Payment Method has been added successfully!',
+    'tiauetapm' => 'There is an error to add Payment Method!',
+    'choose_payment' => 'Choose Payment',
+];

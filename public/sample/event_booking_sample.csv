@@ -1,0 +1,4 @@
+id,event_id,customer_id,parent_slot,is_guest,comment,status
+9,1,1,NULL,0,Here something,1
+1,2,2,NULL,1,Here something,1
+1,2,2,2,0,Here something,1
