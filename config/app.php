@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Pawersystems'),
+    'name' => env('APP_NAME', 'PawersystemsV2'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://www.pawersystems.com'),
+    'url' => env('APP_URL', 'http://www.pawersystemsv2.com'),
 
-    'domain' => env('APP_DOMAIN','pawersystems.com'),
+    'domain' => env('APP_DOMAIN','pawersystemsv2.com'),
 
     'asset_url' => env('ASSET_URL', null),
 
