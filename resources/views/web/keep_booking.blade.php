@@ -56,12 +56,13 @@
 
     @endforeach
 <style>
-.event,.contact { border:2px solid black; margin:10px 0; padding:10px; border-radius:10px;background: rgb(107, 104, 104); cursor: pointer; color:white }
+.event,.contact { border:2px solid black; margin:10px 0; padding:10px; border-radius:10px;background: rgb(107, 104, 104); color:white }
 div[class*="event-"]{ display:none; }
 .selected{background:black;color:white;}
 .nextForm, #nextBtn { display:none; }
 #nextBtn { display:none !important; }
 .btn{ margin: 2px; }
+.hr-color{ background-color: white; }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" id="nextBtn">
@@ -127,8 +128,9 @@ div[class*="event-"]{ display:none; }
                       </div>
                   </div>
                 @endif
-                <div class="form-group">
-                  <p class='text-center register_btn'>{{ __('event.click_here_to_register') }}</p>
+                <hr class="hr-color">
+                <div>
+                  <button class='text-center register_btn btn btn-block btn-info'>{{ __('event.click_here_to_register') }}</button>
                 </div>
               </div>
             @endforeach
@@ -260,9 +262,9 @@ div[class*="event-"]{ display:none; }
 <script>
   function addEvent(obj){
     if(obj.checked){
-      var eventDiv = jQuery(obj).parentsUntil('event');
-      if( eventDiv.hasClass('selected') ){
-        eventDiv.trigger('click');
+      var eventDiv = jQuery(obj).closest('.event');
+      if( !eventDiv.hasClass('selected') ){
+        eventDiv.find('.register_btn').trigger('click');
       }    
     }
   }
@@ -270,22 +272,33 @@ div[class*="event-"]{ display:none; }
 
 @if($events->count())
 <script>
-jQuery('.event').click(function(){
-  jQuery(this).toggleClass('selected');
+jQuery('.register_btn').click(function(){
+  var that = jQuery(this).closest('.event');
+  that.toggleClass('selected');
   var events = '';
   jQuery('.event.selected').each(function(){
-    events += ' <i class="fas fa-check"></i> '+jQuery(this).attr('data-name');
+    events += ' <i class="fas fa-check"></i> '+that.attr('data-name');
   });
   if(events){
-    jQuery(this).find('.register_btn').html("{{ __('event.click_here_to_remove') }}");
     jQuery('.eventDiv').html(events);
     jQuery('.nextForm, #nextBtn').show();
   } 
   else{
-    jQuery(this).find('.register_btn').html("{{ __('event.click_here_to_register') }}");
     jQuery('.eventDiv').html('');
     jQuery('.nextForm, #nextBtn').hide();
-  }  
+  } 
+  if(that.hasClass('selected')){
+    jQuery(this).html("{{ __('event.click_here_to_remove') }}");
+  }else{
+    jQuery(this).html("{{ __('event.click_here_to_register') }}");
+    var thisDataId = that.attr('data-id');
+    var guestCheck = jQuery('input#bringGuest-'+thisDataId);
+    if(guestCheck.length > 0){
+      if(guestCheck.is(":checked")){
+        guestCheck.trigger('click');
+      }
+    }
+  }
 });
 
 jQuery('.nextFormNav').click(function(){
