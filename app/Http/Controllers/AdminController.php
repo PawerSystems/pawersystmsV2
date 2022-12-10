@@ -16,7 +16,6 @@ use App\Models\Date;
 use App\Models\Card;
 use App\Models\Journal;
 
-
 class AdminController extends Controller
 {
     public function index(){
