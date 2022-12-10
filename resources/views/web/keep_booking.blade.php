@@ -277,7 +277,7 @@ jQuery('.register_btn').click(function(){
   that.toggleClass('selected');
   var events = '';
   jQuery('.event.selected').each(function(){
-    events += ' <i class="fas fa-check"></i> '+that.attr('data-name');
+    events += ' <i class="fas fa-check"></i> '+jQuery(this).attr('data-name');
   });
   if(events){
     jQuery('.eventDiv').html(events);
