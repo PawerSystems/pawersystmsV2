@@ -42,6 +42,7 @@ return [
     'none' => 'None',
     'select_location' => 'Select Location:',
     'abeissycndc' => 'Admin bookings/Card exist in system, so you can not delete this admin.',
+    'abeissycndic' => 'Admin bookings/Card exist in system, so you can not disable this admin.',
     'ahbdfs' => 'Admin has been delete from system.',
     'calendar' => 'Calendar',
     'thanks' => 'Thanks',

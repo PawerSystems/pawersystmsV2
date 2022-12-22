@@ -163,6 +163,17 @@ class AdminController extends Controller
         ]);
 
         $admin = User::find($request->id);
+
+        $date = Date::where('user_id',$admin->id)->get()->where('is_active',1)->count();
+        $event = Event::where('user_id',$admin->id)->get()->where('is_active',1)->count();
+        $journals = Journal::where('user_id',$admin->id)->get()->where('is_active',1)->count();
+        if($request->role == 'Customer'){
+            if($date > 0 || $event > 0 ||  $journals > 0){
+                $request->session()->flash('error',__('keywords.abeissycndic'));
+                return \Redirect::back();
+            }
+        }
+
         $check = User::where([['business_id',Auth::user()->business_id],['email',strtolower($request->email)],['id','!=',$request->id]])->count();
         if( $check ){
             $request->session()->flash('error',__('users.user_already_register_with_this_email'));

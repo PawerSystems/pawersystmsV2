@@ -6,6 +6,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Business;
+use App\Models\TreatmentSlot;
+use App\Models\EventSlot;
+use App\Models\Card;
+use App\Models\Date;
+use App\Models\Event;
+use App\Models\Journal;
 use Illuminate\Support\Facades\Validator;
 
 class UserProfileController extends Controller
@@ -195,6 +201,18 @@ class UserProfileController extends Controller
         $validatedData = $request->validate([
             'id' => ['required'],
         ]);
+
+        $treatments = TreatmentSlot::where(\DB::raw('md5(user_id)') , $request->id)->where('is_active',1)->get()->count();
+        $events = EventSlot::where(\DB::raw('md5(user_id)') , $request->id)->get()->where('is_active',1)->count();
+        $cards = Card::where(\DB::raw('md5(user_id)') , $request->id)->get()->where('is_active',1)->count();
+        $date = Date::where(\DB::raw('md5(user_id)') , $request->id)->get()->where('is_active',1)->count();
+        $event = Event::where(\DB::raw('md5(user_id)') , $request->id)->get()->where('is_active',1)->count();
+        $journals = Journal::where(\DB::raw('md5(user_id)') , $request->id)->get()->where('is_active',1)->count();
+
+        if($treatments > 0 || $events > 0 || $cards > 0 || $date > 0 || $event > 0 ||  $journals > 0){
+            $data['status'] = 'exist'; 
+            return json_encode($data);
+        }
 
         $user = User::where(\DB::raw('md5(id)') , $request->id)->first();
         $user->is_active = 0;

@@ -41,6 +41,7 @@ return [
     'none' => 'ingen',
     'select_location' => 'Vælg lokation:',
     'abeissycndc' => 'Administrationsbookinger / kort findes i systemet, så du kan ikke slette denne admin.',
+    'abeissycndic' => 'Admin bookinger/kort findes i systemet, så du kan ikke deaktivere denne admin.',
     'ahbdfs' => 'Admin er blevet slettet fra systemet.',
     'calendar' => 'Calendar',
     'thanks' => 'Mvh',

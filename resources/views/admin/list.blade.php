@@ -242,6 +242,11 @@ function disableUser(id){
                     icon: 'success',
                     title: ' {{ __('users.user_has_been_disable') }}'
                 });         
+            }else if(data['status'] == 'exist'){
+                Toast.fire({
+                    icon: 'error',
+                    title: ' {{ __('keywords.abeissycndic') }}'
+                });   
             }
         },  
         error: function (data) {
