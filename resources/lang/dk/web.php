@@ -103,4 +103,6 @@ return [
     'date/time' => 'Dato / tid',
     'booking' => 'Booking',
     'price' => 'Pris',
+    'booking_time_ends' => 'Bestillingstiden slutter',
+    'expired' => 'Udløbet',
 ];

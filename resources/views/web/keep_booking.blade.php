@@ -114,9 +114,11 @@ div[class*="event-"]{ display:none; }
                 <p><b>{{ __('event.date') }}:</b> {{ \Carbon\Carbon::parse($event->date)->format($dateFormat) }} &nbsp;&nbsp; <b>{{ __('event.time') }}:</b> {{$event->time}} &nbsp;&nbsp; <b>{{ __('web.duration') }}:</b> {{ $event->duration }} min &nbsp;&nbsp; 
                 @php
                   if($event->price ){
-                    echo __('web.price').': </b>'.$event->price;
+                    echo __('web.price').': </b>'.$event->price.' &nbsp;&nbsp; ';
                   }
+                  echo "<br><b>".__('web.booking_time_ends').": </b>";
                 @endphp
+                  <span class="booking_timer">{{ $eventD }}</span>
                 </p>
                 <p>{{ $event->description }}</p>
 
@@ -268,6 +270,34 @@ div[class*="event-"]{ display:none; }
       }    
     }
   }
+  
+  jQuery(document).ready(function(){
+    jQuery('.booking_timer').each(function(){
+      var self = this;
+      // Set the date we're counting down to
+      var countDownDate = new Date(jQuery(this).html()).getTime();
+      // Update the count down every 1 second
+      self.set = setInterval(function() {
+        // Get today's date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Display the result in the element with id="demo"
+        jQuery(self).html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(self.set);
+          jQuery(self).html("{{ __('web.expired') }}");
+        }
+      }, 1000);
+    });
+  });
+
 </script>
 
 @if($events->count())

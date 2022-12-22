@@ -103,4 +103,6 @@ return [
     'date/time' => 'Date / Time',
     'booking' => 'Booking',
     'price' => 'Price',
+    'booking_time_ends' => 'Booking Time Ends',
+    'expired' => 'Expired',
 ];
