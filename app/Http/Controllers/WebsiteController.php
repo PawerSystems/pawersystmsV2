@@ -383,6 +383,7 @@ class WebsiteController extends Controller
         //--------------------------- check for booking -----------------------------
         $eventsArr = explode(',',$request->events);
         $guestsArr = explode(',',$request->guests);
+        $guestsCountArr = explode(',',$request->guestCount);
         foreach($eventsArr as $key => $eventID){ 
             
             $event = Event::find($eventID);
@@ -407,6 +408,7 @@ class WebsiteController extends Controller
         $data['message'] = '';
         foreach($eventsArr as $key => $eventID){ 
             $event = Event::find($eventID);
+            $maxGuest = ($guestsCountArr[$key] > $event->max_guests ? $event->max_guests : $guestsCountArr[$key] );
 
             $stopBooking = Business::find($event->business_id)->Settings->where('key','stop_booking')->first();
             //-------- Minus hours from event time, so that can check it can be booked or not now ---
@@ -498,35 +500,36 @@ class WebsiteController extends Controller
             $booking->status        = ($currentBookings < $limit ? 1 : 0 );
             if($booking->save())
             {
-                $currentBookings++;
-                //---- If guest YES -----
-                if( $guestsArr[$key] == 1 ){
-                    $guest = new EventSlot();
-                    $guest->user_id       = $userID;
-                    $guest->event_id      = $eventID;
-                    $guest->business_id   = $business->id;
-                    $guest->comment       = $request->comment;
-                    $guest->status        = ($currentBookings < $limit ? 1 : 0 );
-                    $guest->is_guest      = 0;
-                    $guest->parent_slot   = $booking->id;
-                    $guest->save();
-                    $currentBookings++;
-                }
-
                 //-------- Send Email to user ----------
                 $email = User::find($userID);
                 // -------  for this user's will change language ------
                 \App::setLocale($email->language);
+                $guestMessage = '';
+                $guestMessageSms = '';
+
+                $currentBookings++;
+                //---- If guest YES -----
+                if( $guestsArr[$key] == 1 ){
+                    for($k=0;$k<$maxGuest;$k++){
+                        $guest = new EventSlot();
+                        $guest->user_id       = $userID;
+                        $guest->event_id      = $eventID;
+                        $guest->business_id   = $business->id;
+                        $guest->comment       = $request->comment;
+                        $guest->status        = ($currentBookings < $limit ? 1 : 0 );
+                        $guest->is_guest      = 0;
+                        $guest->parent_slot   = $booking->id;
+                        $guest->save();
+                        $currentBookings++;
+
+                        $guestMessage .=  __('event.guest_booking_status').': <b>'.($guest->status ? __('event.booked') : __('event.waiting_list')).'</b>';
+                        $guestMessageSms .= __('event.guest_booking_status').($guest->status ? __('event.booked') : __('event.waiting_list'));
+
+                    }
+                }
 
                 $subject = __('emailtxt.event_book_subject',['name' => $brandName->value]);
             
-                $guestMessage = '';
-                $guestMessageSms = '';
-                if(isset($guest->id)){
-                    $guestMessage =  __('event.guest_booking_status').': <b>'.($guest->status ? __('event.booked') : __('event.waiting_list')).'</b>';
-                    $guestMessageSms = __('event.guest_booking_status').($guest->status ? __('event.booked') : __('event.waiting_list'));
-                }   
-                
                 $instructor = '<a target="_blank" href="'.url('/showUser/'.md5($event->user->id)).'">'.$event->user->name.'</a>';
                 $link = url('/other-account/',md5($event->user->id));                
                 $content = __('emailtxt.event_book_txt',['name' => $email->name,'date' => \Carbon\Carbon::parse($event->date)->format($dateFormat->value), 'time' => $event->time, 'status' => ($booking->status ? __('event.booked') : __('event.waiting_list')), 'guest' => $guestMessage, 'ename' => $event->name ,'link' => $link, 'instructor' => $instructor ]);

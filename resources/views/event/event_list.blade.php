@@ -58,6 +58,7 @@ ul.p-a li{ cursor:pointer; }
                     <th>{{ __('event.price') }}</th>
                     @if($settings->value == 'true')
                     <th>{{ __('event.clips') }}</th>
+                    <th>{{ __('event.max_guests') }}</th>
                     @endif
                     <th>{{ __('event.therapist') }}</th>
                     <th>{{ __('event.description') }}</th>
@@ -81,6 +82,7 @@ ul.p-a li{ cursor:pointer; }
                             <td class='text-center'>{{ $value->user->name}}</td>
                             <td>{{ $value->description}}</td>
                             <td class='text-center'><span class="badge bg-{{ $value->is_guest ? 'success' : 'warning'}}">{{ $value->is_guest ? __('event.enable') :  __('event.disable') }}</span></td>
+                            <td class='text-center'>{{ $value->max_guests ?: 0}}</td>
                             <td class='text-center'>{{ $value->min_bookings ?: 0}}</td>
                             <td class='text-center'>
                               @can('Event Edit')

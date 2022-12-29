@@ -109,4 +109,7 @@ return [
     'min_bookings' => 'Minimum bookinger',
     'click_here_to_register' => 'Klik her for at tilmelde dig',
     'click_here_to_remove' => 'Klik her for at fjerne',
+    'max_guests' => 'Max antal gÃ¦ster',
+    'num_of_guests' => 'Antal gÃ¦ster',
+    'max' => 'Maks',
 ];

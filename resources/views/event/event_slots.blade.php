@@ -101,19 +101,20 @@ span.select2{
                           <th>{{ __('event.comment') }} </th>
                           @if($event->is_guest)
                           <th>{{ __('event.bring_guest') }} </th>
+                          <th>{{ __('event.num_of_guests') }} ({{$event->max_guests.' '.__('event.max')}}) </th>
                           @endif
                           <th>{{ __('event.action') }} </th>
                       </tr>
                   </thead>
                   <tbody>
                     @foreach($event->eventActiveSlots as $slot)
-                    @php
-                      $card = null;
-                      $clip = App\Models\UsedClip::where('event_slot_id',$slot->id)->first();
-                      if($clip){
-                        $card = App\Models\Card::find($clip->card_id);
-                      }
-                    @endphp
+                      @php
+                        $card = null;
+                        $clip = App\Models\UsedClip::where('event_slot_id',$slot->id)->first();
+                        if($clip){
+                          $card = App\Models\Card::find($clip->card_id);
+                        }
+                      @endphp
                    
                       <tr>
                       <td class="{{ ($slot->status ? 'bg-info' : 'bg-warning' ) }} text-center status"><span>{{ ($slot->status ? __('event.booked') : __('event.waiting_list') )}}</span></td>
@@ -136,6 +137,7 @@ span.select2{
                       <td>{{$slot->comment}}</td>
                       @if($event->is_guest)
                       <td class="guest">{{ $slot->parent_slot ? __('event.guest') : ($slot->is_guest ? __('event.yes') : __('event.no')) }}</td>
+                      <td class="max_guests"></td>
                       @endif
                       <td>
                       @can('Event Booking Delete')
@@ -176,6 +178,9 @@ span.select2{
                           <option value="0">{{ __('event.no') }}</option>
                           <option value="1">{{ __('event.yes') }}</option>
                         </select>
+                      </td>
+                      <td class="max_guests">
+                        <input type="number" min="0" max="{{ $event->max_guests ?: 1 }}" class="form-control max_guest" name="max_guest" event-id="{{ $event->id }}" >
                       </td>
                       @endif
                       
@@ -565,7 +570,7 @@ function bookEvent(obj){
   //--------- Getting data from button to get form id -----
   var eventID = jQuery(obj).attr('event-id');
   var FormID = 'form-'+eventID;
-  var comment = guest = '';
+  var comment = guest = maxGuest = '';
 
   //--------- Getting comment AND treatment of current data -----
   var tr = jQuery(obj).closest('tr');
@@ -576,6 +581,9 @@ function bookEvent(obj){
       if(jQuery(this).hasClass('guest')){
         guest =  jQuery(this).find('select').val();
       }
+      if(jQuery(this).hasClass('max_guests')){
+        maxGuest =  jQuery(this).find('.max_guest').val();
+      }
   });
   //----------- CSRF token ------------
   var token = $('meta[name="csrf-token"]').attr('content');
@@ -584,7 +592,7 @@ function bookEvent(obj){
   $.ajax({
       type: 'POST',
       url: '/BookEvent',
-      data: jQuery("#"+FormID).serialize()+"&guest="+guest+"&comment="+comment+"&_token="+token,
+      data: jQuery("#"+FormID).serialize()+"&guest="+guest+"&comment="+comment+"&maxGuest="+maxGuest+"&_token="+token,
       dataType: 'json',
       success: function (data) {
         console.log(data);
@@ -683,22 +691,25 @@ function deleteBooking(obj){
             updateCardBalance(data['cardID'],data['balance']);
 
           //----- Updating slots ------
-          var limit = 1;
+          // var limit = 1;
           if(data['slots'] > 1){
-            jQuery(thisTr).next('tr').remove();
+            // jQuery(thisTr).next('tr').remove();
+            for(var k=1; k<data['slots']; k++){
+              jQuery(thisTr).next('tr').remove();
+            }            
             //----- Update next slots status ------
             if(data['limit'] > 0){
-              if(data['limit'] > 1)
-                limit = 2;
-              var trs = jQuery(thisTr).nextAll().find('td.bg-warning').slice(0,limit);
+              // if(data['limit'] > 1)
+              //   limit = 2;
+              var trs = jQuery(thisTr).nextAll().find('td.bg-warning').slice(0,data['limit']);
               jQuery(trs).each(function(i,v){
                   jQuery(this).removeClass('bg-warning').addClass('bg-info').find('span').text('{{ __("event.booked") }}');
               });
-              if(data['limit'] > 2 || jQuery(trs).length < 1 ){
+              if(data['limit'] > jQuery(trs).length ){
                 //console.log("wating length : "+jQuery(trs).length);
                 var mainSlot = jQuery(thisTr).nextAll().find('td.bg-gray').slice(0,1);
                 jQuery(mainSlot).each(function(i,v){
-                  jQuery(this).removeClass('bg-gray').addClass('bg-success').find('span').text('{{ __("event.avavailable") }}');
+                  jQuery(this).removeClass('bg-gray').addClass('bg-success').find('span').text('{{ __("event.available") }}');
                 });
               } 
             }
@@ -716,7 +727,7 @@ function deleteBooking(obj){
               if(data['limit'] > 1 || jQuery(trs).length == 0 ){
                 var mainSlot = jQuery(thisTr).nextAll().find('td.bg-gray').slice(0,1);
                 jQuery(mainSlot).each(function(i,v){
-                  jQuery(this).removeClass('bg-gray').addClass('bg-success').find('span').text('{{ __("event.avavailable") }}');
+                  jQuery(this).removeClass('bg-gray').addClass('bg-success').find('span').text('{{ __("event.available") }}');
                 });
               }
             }

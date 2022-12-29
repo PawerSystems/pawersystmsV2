@@ -110,4 +110,7 @@ return [
     'min_bookings' => 'Minimum Bookings',
     'click_here_to_register' => 'Click here to register',
     'click_here_to_remove' => 'Click here to remove',
+    'max_guests' => 'Max number of guests',
+    'num_of_guests' => 'Number of guests',
+    'max' => 'Max',
 ];

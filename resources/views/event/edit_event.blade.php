@@ -170,9 +170,22 @@
                         <!-- Guests -->
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" name="guest" id="exampleCheck1" class="custom-control-input" {{ $event->is_guest ? 'checked' : '' }}>
-                                <label class="custom-control-label" for="exampleCheck1">Guests Allowed</label>
+                                <input type="checkbox" name="guest" id="guest_check" class="custom-control-input" {{ $event->is_guest ? 'checked' : '' }}>
+                                <label class="custom-control-label" for="guest_check">{{ __('event.guest_allow') }}</label>
                             </div>
+                        </div>
+
+                        <div class="input-group mb-3 max_guests" @php if(!$event->is_guest){ echo 'style="display:none;"'; } @endphp>
+                            <label style="width: 100%;">{{ __('event.max_guests') }}:</label>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <input type="number" min="1" class="form-control" name="max_guests"  id="max_guests" value="{{ $event->max_guests ?: 1 }}">
+                            @if ($errors->has('max_guests'))
+                                <span class="text-danger">{{ $errors->first('max_guests') }}</span>
+                            @endif
                         </div>
 
                     </div>
@@ -288,6 +301,10 @@ $(document).ready(function () {
       $(element).removeClass('is-invalid');
     }
   });
+});
+
+jQuery('#guest_check').on('click',function(){
+    jQuery('.max_guests').fadeToggle().css('display', 'flex');
 });
 </script>
 

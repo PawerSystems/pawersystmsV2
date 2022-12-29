@@ -1,7 +1,9 @@
 @extends("layouts.backend")
 
 @section('content')
-
+<style>
+    .max_guests{ display:none; }
+</style>
 <div class="content-wrapper"> 
 
     <!-- Content Header (Page header) -->
@@ -193,11 +195,23 @@
                         <!-- Guests -->
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" name="guest" id="exampleCheck1" class="custom-control-input">
-                                <label class="custom-control-label" for="exampleCheck1">{{ __('event.guest_allow') }}</label>
+                                <input type="checkbox" name="guest" id="guest_check" class="custom-control-input">
+                                <label class="custom-control-label" for="guest_check">{{ __('event.guest_allow') }}</label>
                             </div>
                         </div>
 
+                        <div class="input-group mb-3 max_guests">
+                            <label style="width: 100%;">{{ __('event.max_guests') }}:</label>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <input type="number" min="1" class="form-control" name="max_guests"  id="max_guests" value="1">
+                            @if ($errors->has('max_guests'))
+                                <span class="text-danger">{{ $errors->first('max_guests') }}</span>
+                            @endif
+                        </div>
                     </div>
                     <div class="card-footer">
                     <button type="submit" class="btn btn-info">{{ __('keywords.save') }}</button>
@@ -364,6 +378,9 @@ function getTherapists(){
         }
     });
 
+    jQuery('#guest_check').on('click',function(){
+        jQuery('.max_guests').fadeToggle().css('display', 'flex');
+    });
 }
 </script>
 @stop

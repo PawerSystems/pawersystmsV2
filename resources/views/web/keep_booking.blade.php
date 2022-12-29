@@ -63,6 +63,16 @@ div[class*="event-"]{ display:none; }
 #nextBtn { display:none !important; }
 .btn{ margin: 2px; }
 .hr-color{ background-color: white; }
+.max_guests{ display:none; }
+.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" id="nextBtn">
@@ -128,6 +138,10 @@ div[class*="event-"]{ display:none; }
                           <input type="checkbox" name="guest-{{$event->id}}" class="custom-control-input" id="bringGuest-{{$event->id}}" onclick="addEvent(this)">
                           <label class="custom-control-label" for="bringGuest-{{$event->id}}">{{ __('web.bring_guest') }}</label>
                       </div>
+                  </div>
+                  <div class="form-group max_guests">
+                    <label for="max_guests">{{ __('event.num_of_guests') }} ( <span class="blink_me">{{ $event->max_guests.' '.__('event.max') }}</span> )</label>
+                    <input type="number" min="1" max="{{ $event->max_guests }}" class="form-control" name="max_guests-{{$event->id}}" id="max_guests-{{$event->id}}" placeholder="{{ $event->max_guests.' '.__('event.max') }}">
                   </div>
                 @endif
                 <hr class="hr-color">
@@ -263,8 +277,9 @@ div[class*="event-"]{ display:none; }
 
 <script>
   function addEvent(obj){
+    var eventDiv = jQuery(obj).closest('.event');
+    jQuery(eventDiv).find('.max_guests').fadeToggle();
     if(obj.checked){
-      var eventDiv = jQuery(obj).closest('.event');
       if( !eventDiv.hasClass('selected') ){
         eventDiv.find('.register_btn').trigger('click');
       }    
@@ -434,13 +449,18 @@ function addBooking(){
     var comment = jQuery('#comment').val();
     var events = [];
     var guests = [];
+    var guestCount = [];
 
     jQuery('.event.selected').each(function(){
       var id = jQuery(this).attr('data-id');
-      if(jQuery('input[name=guest-'+id+']:checked').length > 0)
+      if(jQuery('input[name=guest-'+id+']:checked').length > 0){
         guests.push(1);
-      else
+        guestCount.push(jQuery('#max_guests-'+id).val());
+      }  
+      else{
         guests.push(0);
+        guestCount.push(0);
+      }
 
       events.push(id);
     });
@@ -448,7 +468,7 @@ function addBooking(){
     $.ajax({
       type: 'POST',
       url: '/eventBookFromSiteAjax',
-      data: userData+'&events='+events+'&comment='+comment+'&guests='+guests,
+      data: userData+'&events='+events+'&comment='+comment+'&guests='+guests+'&guestCount='+guestCount,
       dataType: 'json',
       success: function (data) {
         jQuery("html, body").animate({ scrollTop: 0 }, "slow");

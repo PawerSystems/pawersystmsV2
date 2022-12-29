@@ -166,8 +166,10 @@ class EventController extends Controller
             $event->min_bookings = $request->min_bookings;
             $event->description = $request->desc;
             $event->status = 'Active';
-            if($request->guest)
+            if($request->guest){
                 $event->is_guest = 1;
+                $event->max_guests = $request->max_guests;
+            }
             if($event->save())    
                 $check = 1;
             else
@@ -221,6 +223,7 @@ class EventController extends Controller
                 }
                 else{
                     $event->is_guest = 1;
+                    $event->max_guests = $request->max_guests;
                 }
             }
         }
@@ -234,6 +237,7 @@ class EventController extends Controller
                 }
                 else{
                     $event->is_guest = 0;
+                    $event->max_guests = 0;
                 }
             }
         }
@@ -570,6 +574,7 @@ class EventController extends Controller
         $html = '';
         //----- Check existing bookings ----
         $event = Event::find($request->event_id);
+        $maxGuest = ($request->maxGuest > $event->max_guests ? $event->max_guests : $request->maxGuest );
         //------- check if event active ----
         if( $event->is_active == 0 )
             exit();
@@ -614,19 +619,21 @@ class EventController extends Controller
                     $bookingStatusGuest = $bookingStatusGuestSms = '';
                     //---- If guest YES -----
                     if( $request->guest == 1 ){
-                        $guest = new EventSlot();
-                        $guest->user_id       = $request->user_id;
-                        $guest->event_id      = $request->event_id;
-                        $guest->business_id   = Auth::user()->business_id;
-                        $guest->comment       = $request->comment;
-                        $guest->status        = ($currentBookings < $limit ? 1 : 0 );
-                        $guest->is_guest    = 0;
-                        $guest->parent_slot   = $booking->id;
-                        $guest->save();
-                        $currentBookings++;
-                        $html .= $this->getTrData($guest);
-                        $bookingStatusGuest = __('event.guest_booking_status').' <b>'.($guest->status ? __('event.booked') : __('event.waiting_list')).'</b><br>';
-                        $bookingStatusGuestSms = __('event.guest_booking_status').($guest->status ? __('event.booked') : __('event.waiting_list'));
+                        for($k=0; $k < $maxGuest; $k++){
+                            $guest = new EventSlot();
+                            $guest->user_id       = $request->user_id;
+                            $guest->event_id      = $request->event_id;
+                            $guest->business_id   = Auth::user()->business_id;
+                            $guest->comment       = $request->comment;
+                            $guest->status        = ($currentBookings < $limit ? 1 : 0 );
+                            $guest->is_guest    = 0;
+                            $guest->parent_slot   = $booking->id;
+                            $guest->save();
+                            $currentBookings++;
+                            $html .= $this->getTrData($guest);
+                            $bookingStatusGuest = __('event.guest_booking_status').' <b>'.($guest->status ? __('event.booked') : __('event.waiting_list')).'</b><br>';
+                            $bookingStatusGuestSms = __('event.guest_booking_status').($guest->status ? __('event.booked') : __('event.waiting_list'));
+                        }
                     }
 
                     // -------  for this user's will change language ------
@@ -935,7 +942,7 @@ class EventController extends Controller
 
         $guest = '';
         if($data->event->is_guest){
-            $guest = '<td class="guest">'.($data->parent_slot ? __('event.guest') : ($data->is_guest ? __('event.yes') : __('event.no'))).'</td>';
+            $guest = '<td class="guest">'.($data->parent_slot ? __('event.guest') : ($data->is_guest ? __('event.yes') : __('event.no'))).'</td><td></td>';
         }
 
         //------- Cards list for this user ----
