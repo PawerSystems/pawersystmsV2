@@ -58,6 +58,9 @@
                     <th scope="col">{{ __('subscription.sub_ends_at') }}</th>
                     <th scope="col">{{ __('subscription.auto_renew') }}</th>
                     <th scope="col">{{ __('subscription.invoices') }}</th>
+                    @if (in_array(auth()->user()->role,['owner','Owner']) )
+                        <th scope="col">{{ __('profile.action') }}</th>
+                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -75,7 +78,7 @@
                     <td>{{ $plan->name }}</td>
                     {{-- <td>{{ $subscription->name }}</td> --}}
                     <td>{{ $plan->price }}</td>
-                    <td>{{ __($subscription->stripe_status) }}</td>
+                    <td>{{ __$subscription->stripe_status) }}</td>
                     {{-- <td>{{ $subscription->quantity }}</td> --}}
                     <td>{{ $subscription->trial_ends_at ? $subscription->created_at : 'N/A' }}</td>
                     <td>{{ $subscription->trial_ends_at ?: 'N/A' }}</td>
@@ -90,14 +93,16 @@
                     @endif
                     
                     </td>
-
-                    @if (in_array(auth()->user()->role,['owner','Owner']) )
-                        <td>
-                            <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">{{ __('keywords.edit') }}</a>
-                        </td>
-                    @endif
-                    
-                    <td><a href="/invoices/list/{{md5($subscription->id)}}" class="btn btn-info">{{ __('subscription.view_invoices') }}</a></td>
+                    <td>
+                        <a href="/invoices/list/{{md5($subscription->id)}}" class="btn btn-info">
+                            {{ __('subscription.view_invoices') }}
+                        </a>
+                    </td>
+                @if (in_array(auth()->user()->role,['owner','Owner']) )
+                    <td>
+                        <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">{{ __('keywords.edit') }}</a>
+                    </td>
+                @endif                    
                 </tr>
             @empty
             <tr>
