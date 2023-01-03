@@ -78,7 +78,7 @@
                     <td>{{ $plan->name }}</td>
                     {{-- <td>{{ $subscription->name }}</td> --}}
                     <td>{{ $plan->price }}</td>
-                    <td>{{ __$subscription->stripe_status) }}</td>
+                    <td>{{ $subscription->stripe_status) }}</td>
                     {{-- <td>{{ $subscription->quantity }}</td> --}}
                     <td>{{ $subscription->trial_ends_at ? $subscription->created_at : 'N/A' }}</td>
                     <td>{{ $subscription->trial_ends_at ?: 'N/A' }}</td>
@@ -100,7 +100,9 @@
                     </td>
                 @if (in_array(auth()->user()->role,['owner','Owner']) )
                     <td>
-                        <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">{{ __('keywords.edit') }}</a>
+                        <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">
+                            {{ __('keywords.edit') }}
+                        </a>
                     </td>
                 @endif                    
                 </tr>
