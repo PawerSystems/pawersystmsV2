@@ -25,6 +25,8 @@ return [
     'trial_days' => 'Trial Days',
     'trialing' => 'Trialing',
     'active' => 'Active',
+    'incomplete' => 'Incomplete',
+    'subscription.canceled' => 'Canceled',
     'price' => 'Price',
     'status' => 'Status',
     'trial_start_at' => 'Trial Start At',
@@ -44,7 +46,9 @@ return [
     'edit' => 'Edit',
     'update' => 'Update',
     'edit_plan' => 'Edit plan',
+    'edit_subscription' => 'Edit Subscription',
     'status' => 'Status',
     'auto_renew_on' => 'Your auto renewal has been On!',
     'auto_renew_off' => 'Your auto renewal has been Off!',
+    'add_trial_days' => 'Add trial days',
 ];

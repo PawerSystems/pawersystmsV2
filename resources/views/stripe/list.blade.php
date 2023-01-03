@@ -90,6 +90,14 @@
                     @endif
                     
                     </td>
+
+                    <td><a href="/invoices/list/{{md5($subscription->id)}}" class="btn btn-info">{{ __('subscription.view_invoices') }}</a></td>
+                    @if (in_array(auth()->user()->role,['owner','Owner']) )
+                        <td>
+                            <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">{{ __('keywords.edit') }}</a>
+                        </td>
+                    @endif
+                    
                     <td><a href="/invoices/list/{{md5($subscription->id)}}" class="btn btn-info">{{ __('subscription.view_invoices') }}</a></td>
                 </tr>
             @empty

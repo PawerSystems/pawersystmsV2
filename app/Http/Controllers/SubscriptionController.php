@@ -247,4 +247,37 @@ class SubscriptionController extends Controller
         return true;
     }
 
+    //----------------------------------------------//
+    public function editSubscription($subdomain,$id){
+        $subscription = Subscription::where(\DB::raw('md5(id)'),$id)->first();
+        return view('stripe.edit',compact('subscription'));
+    }
+
+    //----------------------------------------------//
+    public function updateSubscription(Request $request){
+
+        $validatedData = $request->validate([
+            'subId' => ['required'],
+            'trial_days' => ['required'],
+        ]);
+        try{
+            //------ updating in DB -----//           
+            $subscription = Subscription::find($request->subId);
+            if($subscription->trial_ends_at == null || $subscription->trial_ends_at < \Carbon\Carbon::now()){
+                $subscription->extendTrial(
+                    now()->addDays($request->trial_days)
+                );
+            }else{
+                $subscription->extendTrial(
+                    $subscription->trial_ends_at->addDays($request->trial_days)
+                );
+            }
+            $request->session()->flash('success','Subscription has been updated!');
+        }
+        catch(Exception $ex){
+            $request->session()->flash('error',$ex->getMessage());
+        }
+        return back();
+    }
+
 }// class ends

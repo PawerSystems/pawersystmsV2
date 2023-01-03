@@ -426,7 +426,9 @@ Route::group(['domain' => '{subdomain}.'.config('app.domain')], function()
             Route::get('/subscription/list', [SubscriptionController::class,'allSubscriptions'] )->name('subscription.list'); 
             Route::get('/subscription/resume', [SubscriptionController::class,'resumeSubscriptions'] )->name('subscription.resume'); 
             Route::get('/subscription/cancel', [SubscriptionController::class,'cancelSubscriptions'] )->name('subscription.cancel'); 
-
+            Route::get('/subscription/edit/{id}', [SubscriptionController::class,'editSubscription'] )->name('subscription.edit'); 
+            Route::post('/subscription/update', [SubscriptionController::class,'updateSubscription'] )->name('subscription.update'); 
+            
 
             Route::get('/invoices/list/{subscription}', [SubscriptionController::class,'viewInvoices'] )->name('invoices.list'); 
             Route::get('/invoice/{invoice}', [SubscriptionController::class,'downloadInvoice'])->name('invoice.download');
