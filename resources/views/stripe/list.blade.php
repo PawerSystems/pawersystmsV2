@@ -78,7 +78,7 @@
                     <td>{{ $plan->name }}</td>
                     {{-- <td>{{ $subscription->name }}</td> --}}
                     <td>{{ $plan->price }}</td>
-                    <td>{{ $subscription->stripe_status) }}</td>
+                    <td>{{ $subscription->stripe_status }}</td>
                     {{-- <td>{{ $subscription->quantity }}</td> --}}
                     <td>{{ $subscription->trial_ends_at ? $subscription->created_at : 'N/A' }}</td>
                     <td>{{ $subscription->trial_ends_at ?: 'N/A' }}</td>
