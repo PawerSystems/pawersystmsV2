@@ -269,7 +269,7 @@ class AdminController extends Controller
             $brandName = Business::find(Auth::user()->business_id)->Settings->where('key','email_sender_name')->first(); 
 
             $url = url("/login");
-            $subject =  __('emailtxt.user_password_update_subject',['name' => $brandName->value]);
+            $subject =  __('emailtxt.user_password_update_email_subject',['name' => $brandName->value]);
             $content =  __('emailtxt.user_password_update_email_txt',['name' =>$admin->name, 'email' => $admin->email, 'url' => $url, 'password' => $request->password]);
             $this->dispatch(new SendEmailJob($admin->email,$subject,$content,$brandName->value,Auth::user()->business_id));
         }
