@@ -175,7 +175,7 @@ Route::group(['domain' => '{subdomain}.'.config('app.domain')], function()
         Route::post('logged_in', [LoginController::class, 'authenticate'])->name('logged_in');
 
         //---------------- Get user data with number only ---------
-        Route::post('/getUserDataWithNumberAjax',[TreatmentController::class,'getUserDataWithNumberAjax'] )->name('getUserDataWithNumberAjax');
+        // Route::post('/getUserDataWithNumberAjax',[TreatmentController::class,'getUserDataWithNumberAjax'] )->name('getUserDataWithNumberAjax');
 
         //---------------- Book event from website -------------
         Route::post('/eventBookFromSiteAjax',[WebsiteController::class,'eventBookFromSiteAjax'] )->name('eventBookFromSiteAjax');

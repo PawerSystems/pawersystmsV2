@@ -242,9 +242,6 @@
       </div>
       <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
         <div class="card-body">
-          <h3 class="section-subheadingbooking text-muted">
-              <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ __('web.ntfifiaiyuypnatsryn') }}</font></font>
-          </h3>
           <form name="contactForm" id="contactForm" onsubmit="return false">
             @csrf
             <!-- <p class="text-info"><i>{{ __('keywords.please_did_not_remove_country_code') }}</i></p> -->
@@ -260,7 +257,7 @@
                   @endforeach 
                 </select>
               </div>
-              <input type="number" class="form-control required min8" name="number" id="number" placeholder="{{ __('keywords.number') }}" onchange="searchUser(this)" required>
+              <input type="number" class="form-control required min8" name="number" id="number" placeholder="{{ __('keywords.number') }}" required>
             </div>
             <div class="form-group">
               <label for="name">{{ __('keywords.name') }}</label>
@@ -676,43 +673,6 @@ function nextCollapse(obj){
   var id = num.replace('#collapse','');
   id = parseInt(id)+1;
   jQuery(obj).closest('.card').next('.card').find('.btn-link').attr({'data-toggle':'collapse','data-target':'#collapse'+id,'aria-expanded':'false','aria-controls':'collapse'+id});
-}
-
-function searchUser(obj){
-  var number = jQuery.trim(jQuery(obj).val());
-  
-  var token = $('meta[name="csrf-token"]').attr('content');
-  $.ajax({
-      type: 'POST',
-      url: '/getUserDataWithNumberAjax',
-      data: { 'search':number,'_token':token },
-      dataType: 'json',
-      success: function (user) {
-        if(jQuery(user).length > 0){
-            jQuery('#id').val(user["id"]);
-            jQuery('#name').val(user["name"]);
-            jQuery('#email').val(user["email"]);
-            jQuery('#number').val(user["number"]);
-          @if($cpr)  
-            jQuery('#cprnr').val(user["cprnr"]);
-          @endif
-          @if($mdr)  
-            jQuery('#mednr').val(user["mednr"]);
-          @endif  
-        } 
-        else{
-            jQuery('#id').val('');
-            jQuery('#name').val('');
-            jQuery('#email').val('');
-          @if($cpr)  
-            jQuery('#cprnr').val('');
-          @endif
-          @if($mdr) 
-            jQuery('#mednr').val('');
-          @endif  
-        } 
-      }
-  });
 }
 
 jQuery('.submit').click(function(){
