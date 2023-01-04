@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'treatment_booking_txt' => 'Hi,</b><br><br>Thank you for using our services. Please find the below details of your booking.<br>Treatment: <b> :treatment </b><br>Treatment Date: <b> :date </b><br>Treatment Time: <b> :time </b><br>Your Booking Status: <b>Booked</b><br><br> <a class="btn  btn-warning" href=":link">View Bookings</a> ',
-    'treatment_waiting_booking_txt' => 'Hi,</b><br><br>Thank you for using our services. Please find the below details of your booking.<br>Treatment: <b> :treatment </b><br>Treatment Date: <b> :date </b><br>Treatment Time: <b> :time </b><br>Your Booking Status: <b>Waiting</b><br><br> <a class="btn  btn-warning" href=":link">View Bookings</a> ',
+    'treatment_booking_txt' => 'Hi,</b><br><br>Thank you for using our services. Please find the below details of your booking.<br>Treatment: <b> :treatment </b><br>Treatment Date: <b> :date </b><br>Treatment Time: <b> :time </b><br>Your Booking Status: <b>Booked</b><br>Location: <b>:description</b><br><br> <a class="btn  btn-warning" href=":link">View Bookings</a> ',
+    'treatment_waiting_booking_txt' => 'Hi,</b><br><br>Thank you for using our services. Please find the below details of your booking.<br>Treatment: <b> :treatment </b><br>Treatment Date: <b> :date </b><br>Treatment Time: <b> :time </b><br>Your Booking Status: <b>Waiting</b><br>Location: <b>:description</b><br><br> <a class="btn  btn-warning" href=":link">View Bookings</a> ',
     'event_book_txt' => 'Hi,</b><br><br>Thank you for using our services. Please find the details of your bookings here.<br><br> <a class="btn  btn-warning home-banner-btn" href=":link">View Bookings</a>',
     'check_email_for_credentials' => '<br><br>If this is your first booking, then please check your email for username/password.',
     'bhbdpcyeffd' => 'Booking has been done! Please check your email for further details.',

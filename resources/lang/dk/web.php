@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'treatment_booking_txt' => 'Hej,</b><br><br>Tak for din booking. Herunder finder du detaljerne.<br>Behandling: <b> :treatment </b><br>Behandlings Dato: <b> :date </b><br>Behandlings Tidspunkt: <b> :time </b><br>Din Booking Status: <b>Booket</b><br> <a class="btn  btn-warning" href=":link">Se reservationer</a><br>',
-    'treatment_waiting_booking_txt' => 'Hej,</b><br><br>Tak for din booking. Herunder finder du detaljerne.<br>Behandling: <b> :treatment </b><br>Behandlings Dato: <b> :date </b><br>Behandlings Tidspunkt: <b> :time </b><br>Din Booking Status: <b>Venteliste</b><br> <a class="btn  btn-warning" href=":link">Se reservationer</a><br>',
+    'treatment_booking_txt' => 'Hej,</b><br><br>Tak for din booking. Herunder finder du detaljerne.<br>Behandling: <b> :treatment </b><br>Behandlings Dato: <b> :date </b><br>Behandlings Tidspunkt: <b> :time </b><br>Din Booking Status: <b>Booket</b><br>Lokation: <b>:description</b><br> <a class="btn  btn-warning" href=":link">Se reservationer</a><br>',
+    'treatment_waiting_booking_txt' => 'Hej,</b><br><br>Tak for din booking. Herunder finder du detaljerne.<br>Behandling: <b> :treatment </b><br>Behandlings Dato: <b> :date </b><br>Behandlings Tidspunkt: <b> :time </b><br>Din Booking Status: <b>Venteliste</b><br>Lokation: <b>:description</b><br> <a class="btn  btn-warning" href=":link">Se reservationer</a><br>',
     'event_book_txt' => 'Hej,</b><br><br>Tak fordi du bruger os. Se detaljerne for din reservation her.<br><br><a class="btn btn-warning home-banner-btn" href=":link">Se reservationer</a>',
     'check_email_for_credentials' => '<br><br>Hvis dette er din første booking, så kontroller venligst din email for brugernavn/password',
     'bhbdpcyeffd' => 'Bookning er ikke færdiggjort! Tjek email for flere detaljer.',

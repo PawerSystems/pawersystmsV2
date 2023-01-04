@@ -239,7 +239,7 @@ class everyMinute extends Command
 
                     if(!empty($availableSlots)){
                         // $slotsForDay .= \Carbon\Carbon::parse($date->date)->format($dateFormat->value.' l').'<br> Slots : '.implode(' - ',$availableSlots)."<br>";
-                        $slotsForDay .= \Carbon\Carbon::parse($date->date)->format($dateFormat->value.' l').'<br> '.$date->user->name.' : '.implode(' - ',$availableSlots)."<br>";
+                        $slotsForDay .= \Carbon\Carbon::parse($date->date)->format($dateFormat->value.' l').'<br>'.__('profile.location').' : '.$date->description ?: 'N/A'.'<br> '.$date->user->name.' : '.implode(' - ',$availableSlots)."<br>";
                     }
                     if ($i == $len) {
                         //--- if it's last turn, send email --//   
@@ -328,7 +328,7 @@ class everyMinute extends Command
                     \App::setLocale($user->language);
                      
                     $subject =  __('emailtxt.reminder_treatment_email_subject',['name' => $senderName]);
-                    $content = __('emailtxt.reminder_treatment_email_txt',['name' => $user->name,'treatment' =>$tbooking->treatment->treatment_name, 'date' => \Carbon\Carbon::parse($tbooking->date->date)->format($dateFormat), 'time' => $tbooking->time, 'url' => $url ]);
+                    $content = __('emailtxt.reminder_treatment_email_txt',['name' => $user->name,'treatment' =>$tbooking->treatment->treatment_name, 'date' => \Carbon\Carbon::parse($tbooking->date->date)->format($dateFormat), 'time' => $tbooking->time, 'url' => $url, 'description' => $date->description ?: 'N/A' ]);
                     
                     //----- Send email ----//
                    \dispatch(new SendEmailJob($user->email,$subject,$content,$senderName,$user->business_id));

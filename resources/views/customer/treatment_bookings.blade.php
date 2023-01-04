@@ -41,6 +41,7 @@
                     <th class="cardUsedt">{{ __('profile.card_use') }}</th>
                     <th class="clipUsedt">{{ __('profile.clips_use') }}</th>
                     <th>{{ __('profile.comment') }}</th>
+                    <th>{{ __('profile.location') }}</th>
                     <th>{{ __('profile.ordered') }}</th>
                     <th>{{ __('profile.action') }}</th>
                   </tr>
@@ -79,6 +80,7 @@
                             <td class="clipUsedt">-</td>
                             @endif
                             <td>{{ $value->comment }}</td>
+                            <td>{{ $value->date->description ?: 'N/A' }}</td>
                             <td>{{ $value->created_at->format($dateFormat.($timeFormat == 12 ? ' h:i:s a' : ' H:i:s')) }}</td>                            
                             <td> 
                             @if( $value->date->date >= date('Y-m-d') )

@@ -59,4 +59,5 @@ return [
     'other' => 'Other',
     'psygf' => 'Please select your gender first.',
     'psyby' => 'Please fill in year of birth',
+    'location' => 'Location',
 ];

@@ -225,7 +225,7 @@ class Controller extends BaseController
             $dateFormat = Business::find($businessID)->Settings->where('key','date_format')->first(); 
 
             // $table = '<style> table.booking, table.booking th, table.booking td { border: 1px solid black; text-align:center; } </style><table class="booking"><tr><th>'.__('treatment.date').'</th><th>'.__('treatment.time').'</th><th>'.__('treatment.treatment').'</th><th>'.__('treatment.treatment_duration').'</th><th>'.__('profile.instructor').'</th><th>'.__('keywords.name').'</th><th>'.__('keywords.email').'</th><th>'.__('keywords.number').'</th><th>'.__('treatment.add_to_calender').'</th></tr>';
-            $table = '<style> table.booking, table.booking th, table.booking td { border: 1px solid black; text-align:center; } </style><table class="booking"><tr><th>'.__('treatment.date').'</th><th>'.__('treatment.time').'</th><th>'.__('treatment.treatment').'</th><th>'.__('treatment.treatment_duration').'</th><th>'.__('profile.instructor').'</th><th>'.__('keywords.name').'</th><th>'.__('keywords.email').'</th><th>'.__('keywords.number').'</th></tr>';
+            $table = '<style> table.booking, table.booking th, table.booking td { border: 1px solid black; text-align:center; } </style><table class="booking"><tr><th>'.__('treatment.date').'</th><th>'.__('treatment.time').'</th><th>'.__('treatment.treatment').'</th><th>'.__('treatment.treatment_duration').'</th><th>'.__('profile.instructor').'</th><th>'.__('keywords.name').'</th><th>'.__('keywords.email').'</th><th>'.__('keywords.number').'</th><th>'.__('profile.location').'</th></tr>';
 
             //------ Get active dates that are not passed yet -----//
             $activeTreatments = Date::where('business_id',$businessID)->where('date','>=',date('Y-m-d'))->where('is_active','1')->pluck('id');
@@ -254,6 +254,7 @@ class Controller extends BaseController
                 $table .= '<td>'.$booking->user->name.'</td>';
                 $table .= '<td>'.$booking->user->email.'</td>';
                 $table .= '<td>'.$booking->user->number.'</td>';
+                $table .= '<td>'.($booking->date->description ?: 'N/A').'</td>';
                 // $table .= "<td><a download='treatment.ics' href='https://".$business->business_name.'.'.config('app.domain')."/ics/".$link->ics()."'>".__('treatment.add')."</a></td>";
                 // $table .= '<td><a  href="'.$cancel.'">'.__('treatment.cancel').'</a></td>';
                 $table .= '</tr>';

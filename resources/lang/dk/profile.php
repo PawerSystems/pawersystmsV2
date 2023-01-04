@@ -59,4 +59,5 @@ return [
     'other' => 'Andet',
     'psygf' => 'Vælg venligst dit køn først.',
     'psyby' => 'udfyld venligst fødselsår',
+    'location' => 'Lokation',
 ];

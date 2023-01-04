@@ -916,7 +916,7 @@ class TreatmentController extends Controller
                 //-------- Send Booking Email to user ----------
                 $table = $this->activeBookings($user->id,Auth::user()->business_id);
                 $subject =  __('emailtxt.treatment_booking_subject',['name' => $brandName->value]);
-                $content =  __('emailtxt.treatment_booking_txt',['name' => $user->name, 'treatment' => $teatmentTime->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => $request->data_time ,'bookingtable' => $table ]);
+                $content =  __('emailtxt.treatment_booking_txt',['name' => $user->name, 'treatment' => $teatmentTime->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => $request->data_time ,'bookingtable' => $table, 'description' => $date->description ?: 'N/A' ]);
 
                 if($user->email != ''){
                     \Log::channel('custom')->info("Sending email to customer about new booking!",['business_id' => Auth::user()->business_id, 'user_id' => $user->id , 'subject' => $subject, 'email_text' => $content]);
@@ -1114,7 +1114,7 @@ class TreatmentController extends Controller
         //------- Response variables ---------
         $data['status'] = 'success';  
         $bookinglink = url('/MyTreatmentBookings');
-        $data['message'] = __('web.treatment_waiting_booking_txt',['name' => $request->email, 'treatment' => $teatment->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => '00:00', 'link' => $bookinglink ]);
+        $data['message'] = __('web.treatment_waiting_booking_txt',['name' => $request->email, 'treatment' => $teatment->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => '00:00', 'link' => $bookinglink, 'description' => $date->description ]);
 
         return json_encode($data);
     }
@@ -1396,7 +1396,7 @@ class TreatmentController extends Controller
                     \App::setLocale($email->language);
                     $table = $this->activeBookings($email->id,$business->id);
                     $subject =  __('emailtxt.treatment_booking_subject',['name' => $brandName->value]);
-                    $content =  __('emailtxt.treatment_booking_txt',['name' => $email->name, 'treatment' => $teatmentTime->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => $request->time, 'bookingtable' => $table ]);
+                    $content =  __('emailtxt.treatment_booking_txt',['name' => $email->name, 'treatment' => $teatmentTime->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => $request->time, 'bookingtable' => $table, 'description' => $date->description ?: 'N/A' ]);
     
                     if($email->email != ''){
                         \Log::channel('custom')->info("Sending booking email to customer!",['business_id' => $business->id, 'user_id' => $email->id , 'subject' => $subject, 'email_text' => $content]);
@@ -1488,7 +1488,7 @@ class TreatmentController extends Controller
                     //------- Response variables ---------
                     \App::setLocale(session()->get('locale'));
                     $bookinglink = url('/MyTreatmentBookings');
-                    $data['message'] = __('web.treatment_booking_txt',['name' => $email->name, 'treatment' => $teatmentTime->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => $request->time, 'link' => $bookinglink ]);
+                    $data['message'] = __('web.treatment_booking_txt',['name' => $email->name, 'treatment' => $teatmentTime->treatment_name, 'date' => \Carbon\Carbon::parse($date->date)->format($dateFormat->value), 'time' => $request->time, 'link' => $bookinglink, 'description' => $date->description ?: 'N/A' ]);
                     $data['status'] = 'success';
                 }
                 #--------------- If YES then trow error ---------------#
