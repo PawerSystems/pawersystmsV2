@@ -239,7 +239,7 @@ class everyMinute extends Command
 
                     if(!empty($availableSlots)){
                         // $slotsForDay .= \Carbon\Carbon::parse($date->date)->format($dateFormat->value.' l').'<br> Slots : '.implode(' - ',$availableSlots)."<br>";
-                        $slotsForDay .= \Carbon\Carbon::parse($date->date)->format($dateFormat->value.' l').'<br>'.__('profile.location').' : '.$date->description ?: 'N/A'.'<br> '.$date->user->name.' : '.implode(' - ',$availableSlots)."<br>";
+                        $slotsForDay .= \Carbon\Carbon::parse($date->date)->format($dateFormat->value.' l').'<br>Location: '.($date->description ?: 'N/A').'<br> '.$date->user->name.' : '.implode(' - ',$availableSlots)."<br>";
                     }
                     if ($i == $len) {
                         //--- if it's last turn, send email --//   
@@ -351,7 +351,7 @@ class everyMinute extends Command
                     $user = User::find($tbooking->user_id);
                     \App::setLocale($user->language);
 
-                    $url = 'https://'.$business->business_name.'.'.config('app.domain').'/other-account/'.md5($tbooking->user_id);
+                    $url = 'https://'.$business->business_name.'.'.config('app.domain');
 
                     //----- Send SMS ----//
                     $sms = __('smstxt.reminder_treatment_sms_txt',['name' => $user->name,'treatment' =>$tbooking->treatment->treatment_name, 'date' => \Carbon\Carbon::parse($tbooking->date->date)->format($dateFormat), 'time' => $tbooking->time,'link'=>$url]);
@@ -404,7 +404,7 @@ class everyMinute extends Command
 
                     $user = User::find($ebooking->user_id);
 
-                    $url = 'https://'.$business->business_name.'.'.config('app.domain').'/other-account/'.md5($ebooking->user_id);
+                    $url = 'https://'.$business->business_name.'.'.config('app.domain');
 
                     \App::setLocale($user->language);
                     
@@ -436,8 +436,7 @@ class everyMinute extends Command
                     $user = User::find($ebooking->user_id);
                     \App::setLocale($user->language);
 
-                    $url = 'https://'.$business->business_name.'.'.config('app.domain').'/other-account/'.md5($ebooking->user_id);
-
+                    $url = 'https://'.$business->business_name.'.'.config('app.domain');
 
                     if($ebooking->status)
                         $status = __('event.booked');

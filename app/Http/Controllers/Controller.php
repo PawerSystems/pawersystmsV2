@@ -192,8 +192,8 @@ class Controller extends BaseController
             //if($user->email == "tbilal866@gmail.com"){
 
                 //----- Replace Day's name and variable ---
-                $eng = ["Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday","Sunday","Slots","Treatments","open_times"];
-                $trans = [__('keywords.Monday'), __('keywords.Tuesday'), __('keywords.Wednesday'),__('keywords.Thursday'),__('keywords.Friday'),__('keywords.Saturday'),__('keywords.Sunday'),__('keywords.slots'),__('keywords.treatments'),__('keywords.open_times')];
+                $eng = ["Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday","Sunday","Slots","Treatments","open_times","Location"];
+                $trans = [__('keywords.Monday'), __('keywords.Tuesday'), __('keywords.Wednesday'),__('keywords.Thursday'),__('keywords.Friday'),__('keywords.Saturday'),__('keywords.Sunday'),__('keywords.slots'),__('keywords.treatments'),__('keywords.open_times'),__('profile.location')];
                 $newcontent = str_replace($eng, $trans, $content);
 
                 if($type == 'Treatment'){
