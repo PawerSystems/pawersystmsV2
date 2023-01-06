@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Stripe\Plan;
 use App\Models\Plan as ModelsPlan;
 use App\Models\User;
+use App\Models\Role;
 use Laravel\Cashier\Subscription;
 
 class SubscriptionController extends Controller
@@ -272,6 +273,58 @@ class SubscriptionController extends Controller
                     $subscription->trial_ends_at->addDays($request->trial_days)
                 );
             }
+            $request->session()->flash('success','Subscription has been updated!');
+        }
+        catch(Exception $ex){
+            $request->session()->flash('error',$ex->getMessage());
+        }
+        return back();
+    }
+
+     //----------------------------------------------//
+     public function changeOwnerSubscription($subdomain,$id){
+        $role = Role::where([['business_id',auth()->user()->business_id],['title','Super Admin']])->first();
+        $subscription = Subscription::where(\DB::raw('md5(id)'),$id)->first();
+        $admins = User::where([['business_id',auth()->user()->business_id],['is_active',1]])->whereIn('role',['Super Admin',$role->id])->get();
+        return view('stripe.ownerUpdate',compact('subscription','admins'));
+    }
+
+     //----------------------------------------------//
+     public function ownerUpdateSubscription(Request $request){
+
+        $validatedData = $request->validate([
+            'subId' => ['required'],
+            'owner' => ['required'],
+        ]);
+
+        try{
+            $user = User::find($request->owner);
+
+            //------ updating in Stripe -----//  
+            $options['id'] = auth()->user()->stripe_id;         
+            $options['name'] = $user->name;         
+            $options['email'] = $user->email;              
+            $options['description'] = "Ownership transfer from '".auth()->user()->name."' to '".$user->name."'"; 
+            
+            //----- Update in local DB ----//
+            $user->stripe_id = auth()->user()->stripe_id;
+            $user->pm_type = auth()->user()->pm_type;
+            $user->pm_last_four = auth()->user()->pm_last_four;
+            $user->trial_ends_at = auth()->user()->trial_ends_at;
+            $user->save();
+
+            Subscription::where('user_id',auth()->user()->id)->update(['user_id' => $user->id]);
+            
+            //----- Update current owner -----//
+            $oldOwner = User::find(auth()->user()->id);
+            $oldOwner->stripe_id = null;
+            $oldOwner->pm_type = null;
+            $oldOwner->pm_last_four = null;
+            $oldOwner->trial_ends_at = null;
+            $oldOwner->save();
+            
+            $user->updateStripeCustomer($options);
+
             $request->session()->flash('success','Subscription has been updated!');
         }
         catch(Exception $ex){

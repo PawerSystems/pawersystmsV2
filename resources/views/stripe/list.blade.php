@@ -57,10 +57,7 @@
                     <th scope="col">{{ __('subscription.trial_ends_at') }}</th>
                     <th scope="col">{{ __('subscription.sub_ends_at') }}</th>
                     <th scope="col">{{ __('subscription.auto_renew') }}</th>
-                    <th scope="col">{{ __('subscription.invoices') }}</th>
-                    @if (in_array(auth()->user()->role,['owner','Owner']) )
-                        <th scope="col">{{ __('profile.action') }}</th>
-                    @endif
+                    <th scope="col">{{ __('profile.action') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -94,17 +91,17 @@
                     
                     </td>
                     <td>
-                        <a href="/invoices/list/{{md5($subscription->id)}}" class="btn btn-info">
-                            {{ __('subscription.view_invoices') }}
-                        </a>
+                        <a href="/invoices/list/{{md5($subscription->id)}}" class="btn btn-info">{{ __('subscription.view_invoices') }}</a>
+
+                        @if (in_array(auth()->user()->role,['owner','Owner']) || $subscription->user->id == auth()->user()->id  )
+                            @if (in_array(auth()->user()->role,['owner','Owner']) )
+                                <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">{{ __('keywords.edit') }}</a>
+                                <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-warning">{{ __('subscription.chnage_ownership') }}</a>
+                            @else
+                                <a href="/subscription/change_owner/{{md5($subscription->id)}}" class="btn btn-warning">{{ __('subscription.chnage_ownership') }}</a>
+                            @endif
+                        @endif
                     </td>
-                @if (in_array(auth()->user()->role,['owner','Owner']) )
-                    <td>
-                        <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">
-                            {{ __('keywords.edit') }}
-                        </a>
-                    </td>
-                @endif                    
                 </tr>
             @empty
             <tr>

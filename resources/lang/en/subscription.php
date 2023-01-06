@@ -51,4 +51,8 @@ return [
     'auto_renew_on' => 'Your auto renewal has been On!',
     'auto_renew_off' => 'Your auto renewal has been Off!',
     'add_trial_days' => 'Add trial days',
+    'not_allowed' => 'Sorry you ae not allowed to download invoice!',
+    'chnage_ownership' => 'Change ownership',
+    'select_owner' => 'Select new owner',
 ];
+
