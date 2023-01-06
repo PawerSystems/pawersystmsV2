@@ -158,7 +158,7 @@
 
                         <!-- Description-->
                         <div class="form-group">
-                            <label>{{ __('treatment.description') }}:</label>
+                            <label>{{ __('profile.location') }}:</label>
                             <textarea class="form-control" name="desc" id="desc"></textarea>                     
                         </div> 
 

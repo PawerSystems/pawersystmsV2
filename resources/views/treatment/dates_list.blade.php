@@ -51,7 +51,7 @@
                     <th>{{ __('treatment.therapist') }}</th>
                     <th>{{ __('treatment.lunch') }}</th>
                     <th>{{ __('treatment.waiting_list') }}</th>
-                    <th>{{ __('treatment.description') }}</th>
+                    <th>{{ __('profile.location') }}</th>
                     <th>{{ __('treatment.action') }}</th>
                   </tr>
                   </thead>
@@ -158,7 +158,7 @@
                     <th>{{ __('treatment.till') }}</th>
                     <th>{{ __('treatment.therapist') }}</th>
                     <th>{{ __('treatment.lunch') }}</th>
-                    <th>{{ __('treatment.description') }}</th>
+                    <th>{{ __('profile.location') }}</th>
                     <th>{{ __('treatment.action') }}</th>
                   </tr>
                   </tfoot>
