@@ -27,4 +27,5 @@ return [
     'tppdnmycp' => 'Den angivne adgangskode stemmer ikke overens med din nuværende adgangskode.',
     'something_went_wrong' => 'Hov! Noget gik galt.',
     'The password must be at least 8 characters.' => 'Adgangskoden skal være på mindst 8 tegn.',
+    'login_page_desc' => "<b>Login til at se, ændre eller aflyse dine bookinger</b><br>For at kunne se dine kommende bookinger skal du logge ind på siden. Benyt det brugernavn og password du modtog ved din første booking. Såfremt du ikke kan huske dit password, kan du trykke på 'Glemt dit password' nedenfor og få tilsendt et nyt på din email.",
 ];

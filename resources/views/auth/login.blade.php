@@ -95,7 +95,9 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-        
+            <div class="container text-center mt-5">
+                {!! __('auth.login_page_desc') !!}
+            </div>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
