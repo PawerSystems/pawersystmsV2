@@ -96,7 +96,7 @@
                         @if (in_array(auth()->user()->role,['owner','Owner']) || $subscription->user->id == auth()->user()->id  )
                             @if (in_array(auth()->user()->role,['owner','Owner']) )
                                 <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-success">{{ __('keywords.edit') }}</a>
-                                <a href="/subscription/edit/{{md5($subscription->id)}}" class="btn btn-warning">{{ __('subscription.chnage_ownership') }}</a>
+                                <a href="/subscription/change_owner/{{md5($subscription->id)}}" class="btn btn-warning">{{ __('subscription.chnage_ownership') }}</a>
                             @else
                                 <a href="/subscription/change_owner/{{md5($subscription->id)}}" class="btn btn-warning">{{ __('subscription.chnage_ownership') }}</a>
                             @endif
