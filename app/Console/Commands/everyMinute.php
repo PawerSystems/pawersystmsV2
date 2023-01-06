@@ -119,6 +119,11 @@ class everyMinute extends Command
             $eventFreeSpotEmailTime = Business::find($event->business_id)->Settings->where('key','event_free_spot_time')->first();
             $dateFormat = Business::find($event->business_id)->Settings->where('key','date_format')->first(); 
 
+            if($eventFreeSpotEmail == null)
+                $eventFreeSpotEmail = false;
+            else
+                $eventFreeSpotEmail = $eventFreeSpotEmail->value;    
+
             # if time field is empty then default time will be 12:00
             if($eventFreeSpotEmailTime == NULL)
                 $eventFreeSpotEmailTime = '12:00';
@@ -131,7 +136,7 @@ class everyMinute extends Command
                 }
                 else{
                     //--- send email --//
-                    if($eventFreeSpotEmail->value == 'true' AND !empty($slotsForDay)){
+                    if($eventFreeSpotEmail == 'true' AND !empty($slotsForDay)){
                         $slotsForDay = $slotsForDay;
                         $controller->sendFreeSpotEmail($bID,$bookedUsersList,$slotsForDay,$type);
                     }
@@ -142,7 +147,7 @@ class everyMinute extends Command
                 }
 
                 //--- check if free spot email enable ---
-                if($eventFreeSpotEmail->value == 'true'){
+                if($eventFreeSpotEmail == 'true'){
                     $bookings = EventSlot::where([['event_id',$event->id],['business_id',$bID],['is_active',1]])->get();
 
                     $bookedUsers = $bookings->pluck('user_id')->toArray();
@@ -437,6 +442,7 @@ class everyMinute extends Command
                     \App::setLocale($user->language);
 
                     $url = 'https://'.$business->business_name.'.'.config('app.domain');
+
 
                     if($ebooking->status)
                         $status = __('event.booked');
