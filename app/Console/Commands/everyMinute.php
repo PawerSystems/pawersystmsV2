@@ -328,7 +328,7 @@ class everyMinute extends Command
                     \App::setLocale($user->language);
                      
                     $subject =  __('emailtxt.reminder_treatment_email_subject',['name' => $senderName]);
-                    $content = __('emailtxt.reminder_treatment_email_txt',['name' => $user->name,'treatment' =>$tbooking->treatment->treatment_name, 'date' => \Carbon\Carbon::parse($tbooking->date->date)->format($dateFormat), 'time' => $tbooking->time, 'url' => $url, 'description' => $tbooking->date->description ?: 'N/A' ]);
+                    $content = __('emailtxt.reminder_treatment_email_txt',['name' => $user->name,'treatment' =>$tbooking->treatment->treatment_name, 'date' => \Carbon\Carbon::parse($tbooking->date->date)->format($dateFormat), 'time' => $tbooking->time, 'url' => $url, 'description' => ($tbooking->date->description ?: 'N/A') ]);
                     
                     //----- Send email ----//
                    \dispatch(new SendEmailJob($user->email,$subject,$content,$senderName,$user->business_id));
