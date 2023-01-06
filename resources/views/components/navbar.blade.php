@@ -192,6 +192,10 @@
     </div>
     @endif
   </nav>
-  <div class="alert alert-danger main-header">
-    <strong>Danger!</strong> You should <a href="#" class="alert-link">read this message</a>.
-  </div>
+
+  @if ( auth()->user()->role != 'Customer' && $status )
+    <div class="alert {{ $status }} main-header">
+      {{ $message }}
+    </div>
+  @endif
+

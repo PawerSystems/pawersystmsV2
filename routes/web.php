@@ -197,7 +197,7 @@ Route::group(['domain' => '{subdomain}.'.config('app.domain')], function()
         Route::any('/contactSave', [WebsiteController::class,'contactSave'])->name('contactSave');
 
         //------------------- Only for active users ------------------------------
-        Route::group(['middleware' => ['auth:sanctum', 'verified','active','systemuser','ProfileCompletionCheck']], function ($subdomain) {
+        Route::group(['middleware' => ['auth:sanctum', 'verified','active','systemuser','SubscriptionCheck','ProfileCompletionCheck']], function ($subdomain) {
 
             //------------ temp settings -------
             Route::get('/settingGenerate', [BusinessController::class,'generateSettings'])->name('settingGenerate');

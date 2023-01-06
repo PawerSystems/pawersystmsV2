@@ -54,5 +54,7 @@ return [
     'not_allowed' => 'Sorry you ae not allowed to download invoice!',
     'chnage_ownership' => 'Change ownership',
     'select_owner' => 'Select new owner',
+    'period_ends' => 'Dear customer, Your subscription going to ends on :date, please make you have enough balance in your linked card to renew. Thank You',
+    'invoice_due' => 'Dear customer, your payment date has been passed, please recharge your card to avoid any inconvenience, otherwise your account will be freezed.',
 ];
 

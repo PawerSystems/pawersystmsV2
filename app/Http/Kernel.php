@@ -70,6 +70,7 @@ class Kernel extends HttpKernel
         'setsession' => \App\Http\Middleware\setsession::class,
         'visitors' => \App\Http\Middleware\visitors::class,
         'ProfileCompletionCheck' => \App\Http\Middleware\ProfileCompletionCheck::class,
+        'SubscriptionCheck' => \App\Http\Middleware\SubscriptionCheck::class,
         'owner' => \App\Http\Middleware\owner::class,
         'superadmin' => \App\Http\Middleware\superadmin::class,
         'departmentCheck' => \App\Http\Middleware\departmentCheck::class,
