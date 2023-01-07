@@ -57,10 +57,11 @@ class SubscriptionStatusCheck extends Command
                 Mail::to('tbilal866@gmail.com')->send(new SendMail("Their is subscription with no user existing in location. Subscription ID: ".$subscription->id." ","pawerbookings.com"));
                 return false;
             }
-            //------- If subscription canceled the disable location -----//
+
+            //------- If subscription has canceled then disable location pages -----//
             if(in_array($subscription->stripe_status,['canceled','unpaid','past_due','incomplete','incomplete_expired','subscription.canceled'])){
                 foreach($pages as $page){
-                    if(in_array($page->page,['BOOKING'])){
+                    if(in_array($page->page,['BOOKING','EVENT'])){
                         if($page->is_active == 1){
                             \Log::channel('custom')->warning('Page has disable by system because of payment issue.');
                             Website::where('id',$page->id)->update(['is_active' => 0]);

@@ -139,6 +139,8 @@ Route::group(['domain' => '{subdomain}.'.config('app.domain')], function()
 
     Route::get('/unsubscribe/{user}',[UserProfileController::class, 'unsub'])->name('unsubscribe');
     Route::post('/unsubUser',[UserProfileController::class, 'unsubUser'])->name('unsubUser');
+    Route::get('/registration',[WebsiteController::class,'registration'])->name('registration');
+    Route::post('/new-registration',[BusinessController::class,'registration'])->name('new.registration');
 
     Route::group(['middleware' => ['setsession']], function ($subdomain) {
 
@@ -490,7 +492,11 @@ Route::group(['domain' => '{subdomain}.'.config('app.domain')], function()
                 Route::post('/plans/save', [SubscriptionController::class,'savePlan'] )->name('plans.save'); 
 
                 Route::get('/plans/edit/{id}', [SubscriptionController::class,'editPlan'])->name('plans.edit');
-                Route::post('/plans/update', [SubscriptionController::class,'updatePlan'] )->name('plans.update'); 
+                Route::post('/plans/update', [SubscriptionController::class,'updatePlan'] )->name('plans.update');
+                
+                Route::get('/requests', [BusinessController::class,'requests'])->name('requests');
+                Route::get('/request/status', [BusinessController::class,'requestStatus'] )->name('request.status');
+
             });
 
         });

@@ -17,6 +17,7 @@ use App\Models\Role;
 use App\Models\Question;
 use App\Models\Option;
 use App\Models\Treatment;
+use App\Models\BusinessRegistration;
 use App\Jobs\SendEmailJob;
 
 
@@ -768,5 +769,60 @@ class BusinessController extends Controller
         }
     }
 
+    //----------------------------------//
+    public function requests(){
+        $requests =  BusinessRegistration::get();
+        return view('business.requests',compact('requests'));
+    } 
+
+    //----------------------------------//
+    public function registration(Request $request){
+        Validator::make($request->all(), [
+            'name'        => ['required','max:100'],
+            'email'    => ['required','email','max:100'],
+            'number'    => ['required','max:20'],
+            'location'    => ['required','max:100'],
+            'plan'    => ['required'],
+            'message'    => ['max:1000'],
+        ])->validate();
+
+        $business = BusinessRegistration::create([
+            'business_name' => $request->location,
+            'name' => $request->name,
+            'email' => $request->email,
+            'number' => $request->number,
+            'plan' => $request->plan,
+            'message' => $request->message,
+        ]);
+
+        if($business){
+            $content = "New business registration request from website. Registration ID:".$business->id;
+
+            \Log::channel('custom')->info("New business registration request from website.");
+
+            $this->dispatch(new SendEmailJob("tbilal866@gmail.com","New Registration",$content,"PawerBooking",1));
+            $this->dispatch(new SendEmailJob("paw.nielsen@pawersystems.dk","New Registration",$content,"PawerBooking",1));
+
+            $request->session()->flash('success','Thank you for registration, shortly you will receive confirmation email.');    
+        }else{
+            $request->session()->flash('error','Opss... Something went wrong, please ty again or try to refres your page.');
+        }
+
+        return \Redirect::back();
+    }
+    //----------------------------------//
+    public function requestStatus(Request $request){
+       try{
+            BusinessRegistration::where('id',$request->id)->update(['status' => $request->status]);
+            $data['status'] = 'success';
+            $data['data'] = 'Request status has been updated!';
+       }
+       catch(Exception $ex){
+            $data['status'] = 'error';
+            $data['data'] = $ex->getMessage();
+       }
+       return $data;
+    } 
+  
 }
 

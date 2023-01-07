@@ -106,6 +106,16 @@
         @endif
 
         @if( Auth::user()->role == "Owner" )   
+
+          <li class="nav-item">
+            <a href="{{ Route('requests',session('business_name')) }}" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+              {{ __('subscription.requests') }} ({{ $requests ?: 0 }})
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item has-treeview {{ (request()->is('business','businessView','createBusiness')) ? 'menu-open ' : '' }}">
             <a href="#" class="nav-link {{ (request()->is('business','businessView','createBusiness')) ? 'active ' : '' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>

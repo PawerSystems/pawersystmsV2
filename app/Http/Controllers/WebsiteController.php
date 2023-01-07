@@ -15,6 +15,7 @@ use App\Models\TreatmentSlot;
 use App\Models\Department;
 use App\Models\Date;
 use App\Models\Links;
+use App\Models\Plan;
 use Illuminate\Support\Facades\Validator;
 
 class WebsiteController extends Controller
@@ -407,6 +408,7 @@ class WebsiteController extends Controller
 
         $data['message'] = '';
         foreach($eventsArr as $key => $eventID){ 
+
             $event = Event::find($eventID);
             $maxGuest = ($guestsCountArr[$key] > $event->max_guests ? $event->max_guests : $guestsCountArr[$key] );
 
@@ -506,7 +508,7 @@ class WebsiteController extends Controller
                 \App::setLocale($email->language);
                 $guestMessage = '';
                 $guestMessageSms = '';
-
+                
                 $currentBookings++;
                 //---- If guest YES -----
                 if( $guestsArr[$key] == 1 ){
@@ -524,12 +526,12 @@ class WebsiteController extends Controller
 
                         $guestMessage .=  __('event.guest_booking_status').': <b>'.($guest->status ? __('event.booked') : __('event.waiting_list')).'</b>';
                         $guestMessageSms .= __('event.guest_booking_status').($guest->status ? __('event.booked') : __('event.waiting_list'));
-
                     }
                 }
 
+
                 $subject = __('emailtxt.event_book_subject',['name' => $brandName->value]);
-            
+                
                 $instructor = '<a target="_blank" href="'.url('/showUser/'.md5($event->user->id)).'">'.$event->user->name.'</a>';
                 $link = url('/other-account/',md5($event->user->id));                
                 $content = __('emailtxt.event_book_txt',['name' => $email->name,'date' => \Carbon\Carbon::parse($event->date)->format($dateFormat->value), 'time' => $event->time, 'status' => ($booking->status ? __('event.booked') : __('event.waiting_list')), 'guest' => $guestMessage, 'ename' => $event->name ,'link' => $link, 'instructor' => $instructor ]);
@@ -839,5 +841,11 @@ class WebsiteController extends Controller
         }
 
         return redirect('/');
+    }
+
+    //---#############################################################################################//
+    public function registration(){
+        $plans = Plan::where('status',1)->get();
+        return view('web.registration',compact('plans'));
     }
 }
