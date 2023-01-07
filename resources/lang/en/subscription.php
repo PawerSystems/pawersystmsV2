@@ -56,5 +56,6 @@ return [
     'select_owner' => 'Select new owner',
     'period_ends' => 'Dear customer, Your subscription going to ends on :date, please make you have enough balance in your linked card to renew. Thank You',
     'invoice_due' => 'Dear customer, your payment date has been passed, please recharge your card to avoid any inconvenience, otherwise your account will be freezed.',
+    'sub_issue' => 'Dear Customer, we are facing issue with your subscription, please contact with support to resolve this issue.',
 ];
 

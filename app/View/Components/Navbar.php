@@ -63,12 +63,12 @@ class Navbar extends Component
                             $this->message = $this->status = '';
                         }
                     }else{
-                        echo 'Your subscription has been canceled, Please contact with admin.';
-                        exit();
+                        $this->message = __('subscription.sub_issue');
+                        $this->status = 'alert-danger';
                     }
                 }else{
-                    echo 'Your subscription has been canceled, Please contact with admin.';
-                    exit();
+                    $this->message = __('subscription.sub_issue');
+                    $this->status = 'alert-danger';
                 }
             }else{
                 return redirect('/plans/checkout/plan_Munxr7zkyxxiuD');
