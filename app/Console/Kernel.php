@@ -19,6 +19,7 @@ class Kernel extends ConsoleKernel
         Commands\everyMinute::class,
         Commands\everyDay::class,
         Commands\FetchOfferData::class,
+        Commands\SubscriptionStatusCheck::class,
     ];
 
     /**
@@ -54,6 +55,16 @@ class Kernel extends ConsoleKernel
         ->onFailure(function(){
             \Log::channel('custom')->error('Error to run fetch data task. fetch:offer');
             Mail::to('tbilal866@gmail.com')->send(new SendMail("Error to run fetch data task.","There is an error to run Schedule task fetch:offer, Please have a look on it.","Pawer System"));
+        });
+
+
+        //----------- Will check subscription status -----
+        $schedule->command('subscription:check')->hourly()->onSuccess(function(){
+            \Log::channel('custom')->info('Schedule for subscription check has work!');
+        })
+        ->onFailure(function(){
+            \Log::channel('custom')->error('Error to run subscription check task. subscription:check');
+            Mail::to('tbilal866@gmail.com')->send(new SendMail("Error to run subscription check task.","There is an error to run Schedule task subscription:check, Please have a look on it.","pawerbookings.com"));
         });
 
         
